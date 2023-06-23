@@ -1,0 +1,71 @@
+.card{
+    width: 450px;
+    height: 790px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 54%, rgba(39,68,99,1) 70%);
+    margin-top: 50px;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 20px;
+    overflow:auto;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+.Btn_shdow{
+    box-shadow: 0 0 30px rgb(7, 110, 206);
+}
+
+.Btn__kart{
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+    width: 100px;
+    background-color: antiquewhite;
+    height: 100px;
+}
+
+.Box__btn{  
+    position: absolute;
+    width: 408px;
+    top: 415px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.Box__btn2{  
+    position: absolute;
+    width: 408px;
+    top: 645px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.Box__btn1{  
+    position: absolute;
+    width: 408px;
+    top: 870px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.None{
+    display: none;
+}
+.mini__Box{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: rgb(115, 166, 228);
+    border-radius:5px;
+}

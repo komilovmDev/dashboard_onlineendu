@@ -1,0 +1,806 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: sans-serif;
+  }
+
+  body {
+      height: 100vh;
+      overflow-y: hidden;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .tgCon {
+    width: 100%;
+    background: #0e1621;
+    display: flex;
+  }
+
+  .tgCon .tgLeft {
+    height: auto;
+    width: 80px;
+    display: flex;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns button .ix {
+    color: #768c9e;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns button {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns button:hover {
+    background: #25303e;
+    cursor: pointer;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns .active {
+    background: #25303e;
+    cursor: pointer;
+    color: #5eb5f7;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns .active .ix {
+    color: #5eb5f7;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns .active span {
+    color: #5eb5f7;
+  }
+
+  .tgCon .tgLeft .tgLeft_Btns button span {
+    color: #768c9e;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .tgCon .tgUsers {
+    min-width: 420px;
+    height: calc(100vh - 68px);
+    background-color: #17212b;
+    border-right: 1px solid black;
+  }
+
+  .tgCon .tgUsers .tgUsersSerach {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+  }
+
+  .tgCon .tgUsers .tgUsersSerach input {
+    width: 95%;
+    height: 60%;
+    background-color: #242f3d;
+    border: none;
+    border-radius: 5px;
+    padding-left: 6px;
+  }
+
+  .tgCon .tgUsers .tgUsersSerach input::placeholder {
+    font-size: 17px;
+    color: #616a6c;
+  }
+
+  .tgCon .tgUsers .tgUsers_users {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .tgCon .tgUsers .tgUsers_users .tgUsers_user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    gap: 20px;
+    background-color: #17212b;
+  }
+
+  .tgCon .tgUsers .tgUsers_users .tgUsers_user:hover {
+      background-color: #25303e;
+  }
+
+  .tgCon .tgUsers .tgUsers_users .active {
+    background-color: #2b5278;
+  }
+
+  .tgCon .tgUsers .tgUsers_users .active:hover {
+    background-color: #2b5278;
+  }
+
+  .tgCon .tgUsers .tgUsers_users .tgUsers_user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .tgCon .tgUsers .tgUsers_users .tgUsers_user .tgUsers_users_Info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tgCon
+    .tgUsers
+    .tgUsers_users
+    .tgUsers_user
+    .tgUsers_users_Info
+    .tgUsers_users_Info_Left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tgCon
+    .tgUsers
+    .tgUsers_users
+    .tgUsers_user
+    .tgUsers_users_Info
+    .tgUsers_users_Info_Left
+    .tgUsers_users_Info_Left_Name {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+  }
+
+  .tgCon
+    .tgUsers
+    .tgUsers_users
+    .tgUsers_user
+    .tgUsers_users_Info
+    .tgUsers_users_Info_Left
+    .tgUsers_users_Info_Left_massage {
+    color: rgba(255, 255, 255, 0.767);
+  }
+
+  .tgCon
+    .tgUsers
+    .tgUsers_users
+    .tgUsers_user
+    .tgUsers_users_Info
+    .tgUsers_users_Info_Right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .tgCon
+    .tgUsers
+    .tgUsers_users
+    .tgUsers_user
+    .tgUsers_users_Info
+    .tgUsers_users_Info_Right
+    .tgUsers_users_Info_Right_Time {
+    color: #fff;
+    font-size: 17px;
+  }
+
+  .tgCon .tgChat {
+    height: calc(100vh - 68px);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #17212b;
+    align-items: center;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .tgChat_userInfo_userName {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tgCon
+    .tgChat
+    .tgChat_userInfo
+    .tgChat_userInfo_userName
+    .tgChat_userInfo_userName_name {
+    font-size: 20px;
+    color: white;
+  }
+
+  .tgCon
+    .tgChat
+    .tgChat_userInfo
+    .tgChat_userInfo_userName
+    .tgChat_userInfo_userName_online {
+    color: #455464;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .tgChatCallBtns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .tgChatCallBtns button {
+    border: none;
+    background-color: transparent;
+    color: #6c7883;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .tgChatCallBtns button:hover {
+    color: #fff;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .prmSet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000000;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .prmSet .close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0);
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .prmSet .prmSetseting {
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    top: 65px;
+    right: 10px;
+    background-color: #17212b;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .prmSet .prmSetseting  button {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    padding: 0px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+
+  .tgCon .tgChat .tgChat_userInfo .prmSet .prmSetseting  button:hover {
+    background-color: rgba(184, 67, 67, 0.082);
+    cursor: pointer;
+  }
+
+  .tgCon .tgChat .tgChatMassage {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: start;
+      flex-grow: 1;
+      gap: 15px;
+      padding: 10px 20px;
+      overflow-y: auto;
+      overflow-x: hidden;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user {
+      display: flex;
+      gap: 5px;
+  }
+
+
+  .tgCon .tgChat .tgChatMassage .user img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user .chat {
+      padding: 5px 10px;
+      background-color: #2b5278;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      padding-right: 180px;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user .chat .massage {
+      font-size: 20px;
+      color: #fff;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user .chat .timeandcheck {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transform: translateY(5px);
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user .chat .timeandcheck span {
+      color: #7a9396;
+      font-size: 18px;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user .chat .timeandcheck button {
+      background-color: transparent;
+      border: none;
+      font-size: 18px;
+      color: #60ade9;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user2 {
+      display: flex;
+      gap: 5px;
+  }
+
+
+  .tgCon .tgChat .tgChatMassage .user2 img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user2 .chat {
+      padding: 5px 10px;
+      background-color: #182533;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user2 .chat .massage {
+      font-size: 20px;
+      color: #fff;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user2 .chat .timeandcheck {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transform: translateY(4px);
+      padding-right: 5px;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user2 .chat .timeandcheck span {
+      color: #7a9396;
+      font-size: 18px;
+  }
+
+  .tgCon .tgChat .tgChatMassage .user2 .chat .timeandcheck button {
+      background-color: transparent;
+      border: none;
+      font-size: 18px;
+      color: #60ade9;
+  }
+
+  .tgCon .tgChat .tgChatMassage .chst {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .tgCon .tgChat .sendMassage {
+      height: 60px;
+      background-color: #17212b;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+  }
+
+  /* .tgCon .tgChat .sendMassage #file {
+      background: transparent;
+      width: 10px;
+      padding: 0px 20px;
+  } */
+
+  .tgCon .tgChat .sendMassage input[type="file"] {
+      display: none;
+  }
+
+  .tgCon .tgChat .sendMassage #mass {
+      flex: 1;
+      height: 100%;
+      background-color: transparent;
+      padding-left: 25px;
+      color: white;
+      font-size: 19px;
+      outline: none;
+      border: none;
+  }
+
+  .tgCon .tgChat .sendMassage #mass::placeholder {
+      color: #68747f;
+  }
+  .tgCon .tgChat .sendMassage .btns {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .tgCon .tgChat .sendMassage .btns button {
+      border: none;
+      background-color: transparent;
+      color: #68747f;
+      font-size: 28px;
+  }
+
+  .profilON {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 82%;
+    height: 90%;
+    z-index: 1;
+  }
+
+  .profilON .close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.096);
+    z-index: 2;
+  }
+
+  .profilON .profil {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profilON .profil .profilBox {
+    width: 400px;
+    height: 500px;
+    background-color: #17212b;
+    border-radius: 15px;
+    z-index: 3;
+  }
+
+  .profilON .profil .profilBox .profilBoxTop {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .profilON .profil .profilBox .profilBoxTop span {
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  .profilON .profil .profilBox .profilBoxTop .btns {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .profilON .profil .profilBox .profilBoxTop .btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    font-size: 36px;
+    color: #68747f;
+    cursor: pointer;
+  }
+
+  .profilON .profil .profilBox .profilImg {
+    width: 100%;
+    height: 50%;
+  }
+
+  .profilON .profil .profilBox .profilImg img {
+    width: 100%;
+  }
+
+
+  @media screen and (max-width: 980px) {
+    .tgCon .tgUsers {
+      min-width: 300px
+    }
+  }
+
+  @media screen and (max-width: 840px) {
+    .tgCon {
+      width: 100%;
+      height: 100vh;
+    }
+    .tgCon .tgUsers {
+      min-width:  calc(100% - 80px);
+    }
+    .tgCon .tgChat {
+      display: none;
+    }
+    .tgCon .on {
+        position: absolute;
+        left: 80px;
+        width: 100%;
+        height: 100vh;
+        background-color: #0e1621;
+        z-index: 9;
+    }
+  }
+
+
+
+  /* /////// smilek ////// */
+  .smaylek{
+    background-color: rgba(14, 14, 14, 0.329);
+    position: absolute;
+    backdrop-filter: blur(5px);
+    right: 0px;
+    bottom: 60px;
+    width: 200px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .Window{
+    display: none;
+  }
+  .Btn__Smilek{
+    cursor: pointer;
+  }
+  .__smile{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgb(39, 39, 39);
+  }
+  .__smile:hover{
+    background-color: whitesmoke;
+  }
+
+  /* /////// smilek ////// */
+
+  /* ///////ContextMenu/////// */
+
+  .ContextMenu{
+    width: 150px;
+    height: 1px;
+    border-radius:5px;
+    position: relative;
+    bottom: 55px;
+    left: 10px;
+  }
+  .Items__CM{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #17212b;
+    margin: 5px;
+    padding-left: 5px;
+    color: rgba(245, 245, 245, 0.849);
+    height: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease-in-out;
+  }
+  .Items__CM:hover{
+    border-radius:3px;
+    background-color: rgb(211, 211, 211);
+    color: rgba(12, 12, 12, 0.849);
+  }
+  .None{
+    display: none;
+  }
+  .contextMM{
+    display: flex;
+    align-items: center;
+  }
+  .ac {
+    display: none;
+  }
+  /* ///////ContextMenu/////// */
+
+  /* //////Action__Mic////// */
+
+  .Animation_Mic{
+    background-color: #2b527800;
+    width: 45px ;
+    height: 45px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+  }
+
+  .Action__Mic:active .Animation_Mic {
+    background-color: #1574d367;
+    animation: pulse 2000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+  }
+
+  .Action__Mic{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    width: 45px ;
+    height: 45px;
+    position: relative;
+    background-color:#17212b;
+    border-radius: 30px;
+    z-index: 1;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 1;
+    }
+  }
+
+  /* //////Action__Mic////// */
+
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background: #17212b;
+    display: flex;
+    align-items: start;
+    justify-content:center;
+    padding-top: 200px;
+}
+
+.login .loginBox {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+}
+
+.login .loginBox .loginTexst {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login .loginBox .loginTexst span {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: white;
+}
+
+.login .loginBox .loginTexst p {
+    color: #768c9e;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+
+.login .loginBox .country {
+    width: 100%;
+}
+
+.login .loginBox .country span {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.login .loginBox .country span::after {
+    content: "";
+    position: absolute;
+    width: 290px;
+    height: 2px;
+    background-color: #768c9e;
+    bottom: 0;
+    left: 0;
+}
+
+.login .loginBox .phone {
+    display: flex;
+    gap: 10px;
+}
+
+.login .loginBox .phone .country {
+    width: 20%;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #768c9e;
+    font-size: 18px;
+}
+
+.login .loginBox .phone .number {
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #768c9e;
+    font-size: 18px;
+}
+
+.login .loginBox .phone .code {
+    width: 300px;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #768c9e;
+    font-size: 18px;
+}
+
+
+.login .loginBox button {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color:rgb(41, 155, 221);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+.sendMassage{
+    height: 100px;
+}
